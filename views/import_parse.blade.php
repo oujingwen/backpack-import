@@ -4,7 +4,7 @@
 @section('header')
   <div class="container-fluid">
     <h2>
-      <span class="text-capitalize">Import Mapping for {!! $crud->getHeading() ?? $crud->entity_name_plural !!}</span>
+      <span class="text-capitalize">{!! $crud->getHeading() ?? $crud->entity_name_plural !!}匯入資料對照</span>
       <small id="datatable_info_stack">{!! $crud->getSubheading() ?? '' !!}</small>
     </h2>
   </div>
@@ -18,9 +18,9 @@
                 <form class="form-horizontal" method="POST" action="{{ url($crud->route.'/import-process') }}">
                     {{ csrf_field() }}
                     <input type="hidden" name="csv_data_file_id" value="{{ $csv_data_file->id }}"/>
-                    <div class="mb-3"> 
-                        <a href="{{ url($crud->route.'/import') }}" class="btn btn-default">Back</a>     
-                        <button type="submit" class="btn ml-2 btn-primary">Import Data</button> 
+                    <div class="mb-3">
+                        <a href="{{ url($crud->route.'/import') }}" class="btn btn-default">返回</a>
+                        <button type="submit" class="btn ml-2 btn-primary">匯入資料</button>
                     </div>
 
                     <div class="responsive-table">
@@ -50,13 +50,13 @@
                                     @endforeach
                                 </tr>
                             @endforeach
-                           
+
                         </table>
                     </div>
 
-                    <div> 
-                        <a href="{{ url($crud->route.'/import') }}" class="btn btn-default">Back</a>     
-                        <button type="submit" class="btn ml-2 btn-primary">Import Data</button> 
+                    <div>
+                        <a href="{{ url($crud->route.'/import') }}" class="btn btn-default">返回</a>
+                        <button type="submit" class="btn ml-2 btn-primary">匯入資料</button>
                     </div>
                 </form>
             </div>

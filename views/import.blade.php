@@ -22,7 +22,7 @@
 
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" name="csv_file" required id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+                            <label class="custom-file-label" for="customFile">選擇擋案</label>
                         </div>
 
                         @if ($errors->has('csv_file'))
@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <label for="csv_file" class="control-label">操作說明:</label>
                         <ol class="pl-3">
-                            <li>請按此格式匯入 csv 檔: <a href="{{ url($crud->route.'/import-format') }}">Download</a></li>
+                            <li>CSV 檔格式請參考此範例: <a href="{{ url($crud->route.'/import-format') }}">Download</a></li>
                             @foreach($instructions as $idx => $instruction)
                                 <li>{{$instruction}}</li>
                             @endforeach
