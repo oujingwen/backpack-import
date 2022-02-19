@@ -3,8 +3,8 @@
 @section('header')
   <div class="container-fluid">
     <h2>
-      <span class="text-capitalize">Import {!! $crud->getHeading() ?? $crud->entity_name_plural !!}</span>
-      <small id="datatable_info_stack">Import {!! $crud->getSubheading() ?? '' !!}</small>
+      <span class="text-capitalize">匯入 {!! $crud->getHeading() ?? $crud->entity_name_plural !!}</span>
+      <small id="datatable_info_stack">匯入 {!! $crud->getSubheading() ?? '' !!}</small>
     </h2>
   </div>
 @endsection
@@ -18,7 +18,7 @@
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('csv_file') ? ' has-error' : '' }}">
-                        <label for="csv_file" class="control-label">CSV file to import: </label>
+                        <label for="csv_file" class="control-label">匯入CSV 檔: </label>
 
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" name="csv_file" required id="customFile">
@@ -34,9 +34,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="csv_file" class="control-label">Instructions:</label>
+                        <label for="csv_file" class="control-label">操作說明:</label>
                         <ol class="pl-3">
-                            <li>Upload a CSV in the following format: <a href="{{ url($crud->route.'/import-format') }}">Download</a></li>
+                            <li>請按此格式匯入 csv 檔: <a href="{{ url($crud->route.'/import-format') }}">Download</a></li>
                             @foreach($instructions as $idx => $instruction)
                                 <li>{{$instruction}}</li>
                             @endforeach
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary"> Submit </button>
+                        <button type="submit" class="btn btn-primary"> 送出 </button>
                     </div>
                 </form>
             </div>
