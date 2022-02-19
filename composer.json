@@ -1,12 +1,12 @@
 {
-    "name": "ckhandla94/backpack-import",
+    "name": "oujingwen/backpack-import",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [{
-        "name": "Chetan Khandla",
-        "email": "ckhandla94@gmail.com"
+        "name": "Jan Ou",
+        "email": "oujingwen@gmail.com"
     }],
     "require": {
         "atk14/csv-reader": "^1.1"
